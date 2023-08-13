@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="316dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/card_bg"
+    android:layout_margin="@dimen/_8dp"
+    android:padding="@dimen/_16dp"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="@dimen/_16dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/luna_brokenbattery_full"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sbj_median_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/smallHeader"
+            android:text="20% Median Score"
+            android:textColor="@color/primary_light"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sbj_questions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/smallHeader"
+            android:text="20 Questions"
+            android:textColor="@color/primary_light"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sbj_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/smallHeader"
+            android:text="15 minutes"
+            android:textColor="@color/primary_light"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sbj_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextHeader"
+        android:text="Agile Methodologies"
+        android:textColor="@color/white"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sbj_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/smallHeader"
+        android:text="Project Management"
+        android:textColor="@color/primary_light"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_take_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="190dp"
+        style="@style/ButtonLight"
+        android:text="Take Test"
+        />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
