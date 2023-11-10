@@ -1,9 +1,21 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.Podium" parent="Base.Theme.Podium">
+    <style name="Theme.AppCompat.Starting" parent="Base.Theme.AppCompat.Starting">
         <!-- Transparent system bars for edge-to-edge. -->
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:statusBarColor">@color/dark_primary</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="android:navigationBarColor">@color/dark_primary</item>
+        // Important to draw behind cutouts
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:ignore="NewApi">shortEdges</item>
+
+        <item name="windowSplashScreenBackground">@color/dark_primary</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">
+            @drawable/ic_launcher_foreground
+        </item>
+        <item name="windowSplashScreenAnimationDuration">4000</item>
+        <item name="postSplashScreenTheme">@style/Theme.Podium</item>
     </style>
 </resources>

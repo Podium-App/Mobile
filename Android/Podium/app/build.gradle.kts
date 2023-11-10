@@ -1,7 +1,8 @@
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin ("kapt")
+    id ("dagger.hilt.android.plugin")
 }
 
 android {
@@ -28,15 +29,23 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+        kotlinOptions {
+            jvmTarget = "17"
+        }
     }
+
     buildFeatures {
         viewBinding = true
     }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+
 }
 
 dependencies {
@@ -54,14 +63,46 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    implementation ("com.github.ibrahimsn98:CirclesLoadingView:1.0")
+
+
 
     //splashscreen api
     implementation("androidx.core:core-splashscreen:1.0.1")
 
 
     // Room components
-    implementation( "androidx.room:room-ktx:2.3.0")
-    androidTestImplementation ("androidx.room:room-testing:2.3.0")
+    implementation ("androidx.room:room-ktx:2.3.0")
+    kapt ("androidx.room:room-compiler:2.3.0")
+    androidTestImplementation( "androidx.room:room-testing:2.3.0")
 
+
+
+    // Moshi
+    implementation ("com.squareup.moshi:moshi-kotlin:1.13.0")
+    // Retrofit with Moshi Converter
+    implementation ("com.squareup.retrofit2:converter-moshi:2.9.0")
+
+
+    //Hilt dependencies
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
+
+
+
+    //dot indicator
+    implementation("com.tbuonomo:dotsindicator:5.0")
+
+    // cicular indicator for scores
+    implementation("com.github.antonKozyriatskyi:CircularProgressIndicator:1.3.0")
+
+
+    // markdown preview
+    implementation("com.github.mukeshsolanki:MarkdownView-Android:1.1.0")
 }
 
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
+}

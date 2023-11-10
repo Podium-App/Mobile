@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".destinations.connectivity.DisconnectedFragment"
+    android:padding="@dimen/_34dp"
+    android:background="@color/dark_primary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/ooops"
+        style="@style/h1"
+        android:textColor="@color/primary_light"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/network_unavailable_please_check_your_connection_and_try_again"
+        style="@style/p"
+        android:textColor="@color/accent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/trybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/ButtonLight"
+        android:text="@string/try_again"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
