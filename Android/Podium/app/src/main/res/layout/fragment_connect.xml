@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".destinations.connectivity.ConnectFragment"
+    android:background="@color/dark_primary"
+    android:padding="@dimen/_34dp">
+
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        />
+
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <me.ibrahimsn.lib.CirclesLoadingView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:circleRadius="8dp"
+        app:circleMargin="8dp"
+        app:animDistance="10dp"
+        app:animDuration="500"
+        app:animDelay="150"
+        app:animInterpolator="accelerateDecelerate"  />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/fetching_data"
+        android:keepScreenOn="true"
+        style="@style/h2"
+        android:textColor="@color/accent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/this_may_take_a_few_seconds"
+        android:padding="@dimen/_8dp"
+        style="@style/p"
+        android:id="@+id/text"
+        android:textColor="@color/primary_light"/>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,5 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+    <!-- Base application theme. -->
     <style name="Base.Theme.Podium" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
@@ -22,46 +23,85 @@
         <item name="colorAccent">@color/primary</item>
     </style>
 
+
     <style name="Theme.AppCompat.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/dark_primary</item>
-        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@drawable/ic_launcher_foreground</item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">
+            @drawable/ic_launcher_foreground
+        </item>
         <item name="windowSplashScreenAnimationDuration">4000</item>
         <item name="postSplashScreenTheme">@style/Theme.Podium</item>
     </style>
 
-    <style name="activeItem">
-        <item name="background">@drawable/white_card</item>
+    <!--
+    Text styles : four main text styles : h1, h2, h3, P
+    -->
+    <style name="decorative" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">35sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="fontFamily">@font/neuemachinabold</item>
     </style>
 
-    <style name="TextHeader" parent="Widget.AppCompat.TextView">
+    <style name="h1" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/bold</item>
+    </style>
+
+    <style name="h2" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">25sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:layout_marginTop">@dimen/_16dp</item>
-        <item name="android:layout_marginStart">@dimen/_16dp</item>
-        <item name="android:layout_marginBottom">@dimen/_8dp</item>
+        <item name="fontFamily">@font/bold</item>
     </style>
 
-    <style name="smallHeader" parent="Widget.AppCompat.TextView">
-        <item name="android:textSize">14sp</item>
-        <item name="android:layout_marginStart">@dimen/_16dp</item>
+    <style name="h3" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/medium</item>
     </style>
+
+    <style name="p" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="small" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/light</item>
+    </style>
+
+
+    <!--
+    Button styles : primary, secondary and disabled
+    -->
 
     <style name="ButtonLight" parent="Widget.AppCompat.Button">
         <item name="textAllCaps">true</item>
-        <item name="android:padding">@dimen/_16dp</item>
+        <item name="android:padding">16dp</item>
         <item name="android:background">@drawable/button_bg_light</item>
-        <item name="android:layout_margin">@dimen/_16dp</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="fontFamily">@font/regular</item>
     </style>
 
     <style name="ButtonDark" parent="Widget.AppCompat.Button">
         <item name="textAllCaps">true</item>
-        <item name="android:padding">@dimen/_16dp</item>
+        <item name="android:padding">16dp</item>
         <item name="android:background">@drawable/card_bg</item>
-        <item name="android:layout_margin">@dimen/_16dp</item>
+        <item name="android:layout_margin">16dp</item>
         <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/regular</item>
+    </style>
+
+    <style name="Theme.AppCompat.Starting.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AppCompat.Starting" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
 
-
-
 </resources>
+
+
+

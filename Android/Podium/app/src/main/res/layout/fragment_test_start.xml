@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".destinations.test.TestStartFragment"
+    android:background="@color/primary"
+    android:padding="@dimen/_34dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/_16dp"
+        android:id="@+id/loaderView"
+        android:layout_gravity="center">
+
+        <me.ibrahimsn.lib.CirclesLoadingView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:circleRadius="8dp"
+            app:circleMargin="16dp"
+            app:animDistance="20dp"
+            app:animDuration="500"
+            app:animDelay="150"
+            app:animInterpolator="accelerateDecelerate"  />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/startStatus"
+            style="@style/p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16dp"
+            android:keepScreenOn="true"
+            android:text="starting test"
+            android:textColor="@color/black" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/retryView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ooops"
+            style="@style/h1"
+            android:textColor="@color/dark_primary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/network_unavailable_please_check_your_connection_and_try_again"
+            style="@style/p"
+            android:textColor="@color/dark_primary"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/trybutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ButtonDark"
+            android:text="@string/try_again"/>
+
+    </LinearLayout>
+
+</FrameLayout>

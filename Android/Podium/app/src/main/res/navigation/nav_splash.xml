@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/connectFragment">
+
+    <fragment
+        android:id="@+id/connectFragment"
+        android:name="xyz.thisisjames.boulevard.android.podium.destinations.connectivity.ConnectFragment"
+        android:label="fragment_connect"
+        tools:layout="@layout/fragment_connect" >
+        <action
+            android:id="@+id/action_connectFragment_to_disconnectedFragment"
+            app:destination="@id/disconnectedFragment" />
+        <action
+            android:id="@+id/action_connectFragment_to_disconnectedFragment2"
+            app:destination="@id/disconnectedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/disconnectedFragment"
+        android:name="xyz.thisisjames.boulevard.android.podium.destinations.connectivity.DisconnectedFragment"
+        android:label="fragment_disconnected"
+        tools:layout="@layout/fragment_disconnected" >
+        <action
+            android:id="@+id/action_disconnectedFragment_to_connectFragment"
+            app:destination="@id/connectFragment" />
+    </fragment>
+</navigation>

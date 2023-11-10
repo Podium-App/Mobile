@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.ui.search.SearchFragment">
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".destinations.home.SearchFragment">
 
-    <TextView
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/primary"
+        android:padding="@dimen/_16dp">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8dp"
+            android:gravity="center"
+            android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8dp"
+                android:background="@drawable/edt_bg_trans"
+                android:hint="Find a challenge that fits"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:id="@+id/searchEdittext"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/searchSUbmitButton"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/luna_search"
+                style="@style/ButtonLight"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/resultSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_34dp"
+            android:layout_marginEnd="@dimen/_34dp"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:textColor="@color/black"
+            android:text="123 instances of python found"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/subjectList"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/subject_item"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
